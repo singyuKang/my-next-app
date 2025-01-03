@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@app/*": ["src/app/*"],
+      "@assets/*": ["src/assets/*"],
+      "@common/*": ["src/modules/common/*"],
+      "@components/*": ["src/components/*"],
+      "@data/*": ["src/data/*"],
+      "@foundation/*": ["src/foundation/*"],
+      "@modules/*": ["src/modules/*"],
+      "@templates/*": ["src/templates/*"],
+      "@vendor/*": ["src/modules/vendor/*"]
+    },
+    "typeRoots": ["src/types", "node_modules/@types"],
+    "jsx": "react-jsx"
+  }
+}
