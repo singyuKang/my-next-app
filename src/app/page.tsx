@@ -4,6 +4,7 @@ import { Device } from "src/modules/common/device/Device";
 
 export default async function Home() {
   const device = await Device.getDevice();
+  console.log("🚀 ~ Home ~ device:", device);
   return (
     <Page
       device={device.name}

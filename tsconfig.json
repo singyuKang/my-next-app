@@ -20,7 +20,16 @@
       }
     ],
     "paths": {
-      "@assets/*": ["src/assets/*"]
+      "@/*": ["src/*"],
+      "@app/*": ["src/app/*"],
+      "@assets/*": ["src/assets/*"],
+      "@common/*": ["src/modules/common/*"],
+      "@components/*": ["src/components/*"],
+      "@data/*": ["src/data/*"],
+      "@foundation/*": ["src/foundation/*"],
+      "@modules/*": ["src/modules/*"],
+      "@templates/*": ["src/templates/*"],
+      "@vendor/*": ["src/modules/vendor/*"]
     }
   },
   "include": [

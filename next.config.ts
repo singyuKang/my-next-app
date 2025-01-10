@@ -11,11 +11,10 @@ const nextConfig: NextConfig = {
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
-      issuer: /\.(js|jsx|ts|tsx)$/, // 모든 관련 확장자 추가
       use: ["@svgr/webpack"],
     });
     return config;
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
