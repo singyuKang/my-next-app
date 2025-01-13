@@ -1,15 +1,16 @@
-import { Container } from "src/components/Container/Container";
-import { Page } from "src/components/Page/Page";
-import { Device } from "src/modules/common/device/Device";
+import { headers } from 'next/headers'
+import { Container } from 'src/components/Container/Container'
+import { Page } from 'src/components/Page/Page'
+import { Device } from 'src/modules/common/device/Device'
 
 export default async function Home() {
-  const device = await Device.getDevice();
-  console.log("🚀 ~ Home ~ device:", device);
+  const device = await Device.getDevice(headers())
+  // console.log('🚀 ~ Home ~ device:', device)
   return (
     <Page
       device={device.name}
-      title={"pageTitle"}
-      breadcrumbItems={["소비자보호", "개인정보보호", "pageTitle"]}
+      title={'pageTitle'}
+      breadcrumbItems={['소비자보호', '개인정보보호', 'pageTitle']}
       containerVariant="wide"
     >
       <Container
@@ -20,5 +21,5 @@ export default async function Home() {
         <text>aaa</text>
       </Container>
     </Page>
-  );
+  )
 }
