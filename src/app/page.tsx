@@ -18,7 +18,7 @@ export default async function Home() {
         className="flex flex-col gap-y-[24px]"
         variant="wide"
       >
-        <text>aaa</text>
+        {/* <text>aaa</text> */}
       </Container>
     </Page>
   )

@@ -7,6 +7,7 @@ import TopBtnIcon from '@assets/icon/main/top_btn.png'
 import { SpinnerProvider } from '@/components/Spinner/SpinnerProvider'
 import { ModalProvider } from '@/components/Modal/ModalProvider'
 import { headers } from 'next/headers'
+import { GlobalHeader } from '@/components/Page/GlobalHeader/GlobalHeader'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -36,6 +37,7 @@ export default async function RootLayout({
                 .join(' ')
                 .trim()}
             >
+              <GlobalHeader device={device.name} />
               <div className="grow">{children}</div>
             </div>
           </ModalProvider>
