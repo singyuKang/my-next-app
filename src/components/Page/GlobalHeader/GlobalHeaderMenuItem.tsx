@@ -96,7 +96,8 @@ export const GlobalHeaderMenuItem = ({
         <div className=" h-[8px]">
           {!isEmpty(subMenuItems) && (
             <div className="h-[8px]">
-              {active ? <ArrowUpIcon /> : <ArrowDownIcon />}
+              {/* {active ? <ArrowUpIcon /> : <ArrowDownIcon />} */}
+              {active ? <></> : <></>}
             </div>
           )}
         </div>

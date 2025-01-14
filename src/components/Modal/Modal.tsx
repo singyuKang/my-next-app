@@ -64,7 +64,8 @@ export const Modal = ({
           >
             <div className="flex w-[32px] h-[32px] justify-center items-center">
               <div className="w-[16px] h-[16px] text-gray5">
-                <CloseIcon />
+                {/* <CloseIcon /> */}
+                <></>
               </div>
             </div>
           </div>

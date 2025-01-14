@@ -48,14 +48,16 @@ export abstract class Device {
     return new Desktop() // 기본값
   }
 
-  static getDeviceTypeFromHeaders = async (headers: ReadonlyHeaders) => {
-    const headersObject = Object.fromEntries(headers) // ReadonlyHeaders를 일반 객체로 변환
+  static getDeviceTypeFromHeaders = async (
+    headers: Promise<ReadonlyHeaders>
+  ) => {
+    const headersObject = Object.fromEntries(await headers) // ReadonlyHeaders를 일반 객체로 변환
     const userAgent = headersObject['user-agent'] || ''
     const isMobile = /Mobi|Android/i.test(userAgent)
     return isMobile ? new Mobile() : new Desktop()
   }
 
-  static getDevice = async (headers: ReadonlyHeaders) => {
+  static getDevice = async (headers: Promise<ReadonlyHeaders>) => {
     let deviceType: Desktop | Mobile
     if (typeof window === 'undefined') {
       deviceType = await this.getDeviceTypeFromHeaders(headers)

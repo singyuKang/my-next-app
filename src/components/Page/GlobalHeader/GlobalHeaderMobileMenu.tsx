@@ -27,7 +27,8 @@ const Button = ({
     className="text-gray2 w-[20px] h-[20px]"
     onClick={() => (active ? onClickClose() : onClickOpen())}
   >
-    {active ? <CloseIcon /> : <MenuIcon />}
+    {/* {active ? <CloseIcon /> : <MenuIcon />} */}
+    {active ? <></> : <></>}
   </div>
 )
 
