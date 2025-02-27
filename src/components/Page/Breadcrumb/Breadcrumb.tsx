@@ -1,9 +1,10 @@
-import Link from "next/link";
-import { Device, HasDevice } from "src/modules/common/device/Device";
-import { Container } from "src/components/Container/Container";
-import { Text } from "@/foundation/Text/Text";
+import Link from 'next/link'
+import { Device, HasDevice } from 'src/modules/common/device/Device'
+import { Container } from 'src/components/Container/Container'
+import { Text } from '@/foundation/Text/Text'
+
 interface BreadcrumbProps extends HasDevice {
-  items: string[];
+  items: string[]
 }
 
 export const Breadcrumb = ({ device: rawDevice, items }: BreadcrumbProps) => {
@@ -20,7 +21,7 @@ export const Breadcrumb = ({ device: rawDevice, items }: BreadcrumbProps) => {
         fill="currentColor"
       />
     </svg>
-  );
+  )
 
   const ArrowRightIcon = () => (
     <svg
@@ -32,11 +33,11 @@ export const Breadcrumb = ({ device: rawDevice, items }: BreadcrumbProps) => {
     >
       <path d="M0.5 1L5 5.5L0.5 10" stroke="currentColor" />
     </svg>
-  );
+  )
 
-  const device = Device.of(rawDevice);
+  const device = Device.of(rawDevice)
   if (device.isMobile()) {
-    return <></>;
+    return <></>
   }
 
   return (
@@ -47,6 +48,7 @@ export const Breadcrumb = ({ device: rawDevice, items }: BreadcrumbProps) => {
             <Link href="/" className="block" prefetch={false}>
               <div className="h-[12px] text-gray6">
                 <HomeIcon />
+                {/* <Image src={homeIcon} alt="" width={15} /> */}
               </div>
             </Link>
           </li>
@@ -61,9 +63,9 @@ export const Breadcrumb = ({ device: rawDevice, items }: BreadcrumbProps) => {
               <div className="relative top-[1px]">
                 <Text
                   variant="caption3"
-                  color={idx === items.length - 1 ? "white" : "gray6"}
+                  color={idx === items.length - 1 ? 'white' : 'gray6'}
                   className={`${
-                    idx === items.length - 1 ? "font-bold" : ""
+                    idx === items.length - 1 ? 'font-bold' : ''
                   } select-all`}
                 >
                   {item}
@@ -74,5 +76,5 @@ export const Breadcrumb = ({ device: rawDevice, items }: BreadcrumbProps) => {
         </ul>
       </Container>
     </div>
-  );
-};
+  )
+}

@@ -8,6 +8,7 @@ import { SpinnerProvider } from '@/components/Spinner/SpinnerProvider'
 import { ModalProvider } from '@/components/Modal/ModalProvider'
 import { headers } from 'next/headers'
 import { GlobalHeader } from '@/components/Page/GlobalHeader/GlobalHeader'
+import { GlobalFooter } from '@/components/Page/GlobalFooter/GlobalFooter'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -39,6 +40,7 @@ export default async function RootLayout({
             >
               <GlobalHeader device={device.name} />
               <div className="grow">{children}</div>
+              <GlobalFooter device={device.name} />
             </div>
           </ModalProvider>
         </SpinnerProvider>
