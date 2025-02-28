@@ -23,6 +23,7 @@
       "@/*": ["src/*"],
       "@app/*": ["src/app/*"],
       "@assets/*": ["src/assets/*"],
+      "@utils/*": ["src/utils/*"],
       "@common/*": ["src/modules/common/*"],
       "@components/*": ["src/components/*"],
       "@data/*": ["src/data/*"],

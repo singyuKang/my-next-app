@@ -18,6 +18,7 @@ export const allColors = [
   'yellow',
   'green',
   'blue',
+  'foreground',
 ] as const
 type ColorTuple = typeof allColors
 export type Color = ColorTuple[number]

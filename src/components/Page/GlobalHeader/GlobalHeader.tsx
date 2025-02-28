@@ -1,10 +1,18 @@
-import { HTMLAttributes } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import LogoLight from '@assets/image/logo_light.png'
+'use client'
+import { HTMLAttributes, useState } from 'react'
 import { Device, HasDevice } from '@common/device/Device'
-import { GlobalHeaderMenu } from '@components/Page/GlobalHeader/GlobalHeaderMenu'
-import { Container } from '@/components/Container/Container'
+import {
+  Link,
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
+} from '@nextui-org/react'
+import SettingIcons from './SettingIcons'
+import { Text } from '@/foundation/Text/Text'
 
 interface GlobalHeaderProps extends HasDevice, HTMLAttributes<HTMLDivElement> {}
 
@@ -14,8 +22,8 @@ export const GlobalHeader = ({
   ...props
 }: GlobalHeaderProps) => {
   const device = Device.of(rawDevice)
+  console.log('🚀 ~ device:', device)
   const className = [
-    'bg-white',
     device.map({
       desktop: () => 'border-b border-b-gray6 fixed top-0 left-0 right-0 z-20',
       mobile: () => 'fixed top-0 left-0 right-0 z-20',
@@ -24,46 +32,72 @@ export const GlobalHeader = ({
   ]
     .join(' ')
     .trim()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const LinkList = [
+    'Experience',
+    'Project',
+    'Skill',
+    'Award',
+    'Certificate',
+    'Retrospective',
+    'Blog',
+  ]
+
   return (
     <>
-      {device.isDesktop() && <div className="h-[64px]" />}
       <header {...props} className={className}>
-        <Container
-          device={device.name}
-          variant="widest"
-          className={[
-            'flex',
-            device.map({
-              desktop: () => 'flex-row justify-between items-center',
-              mobile: () => 'w-full flex-col items-start !px-0 relative',
-            }),
-          ]
-            .join(' ')
-            .trim()}
+        <Navbar
+          isMenuOpen={isMenuOpen}
+          onMenuOpenChange={setIsMenuOpen}
+          shouldHideOnScroll
+          isBordered
         >
-          <Link
-            href="/"
-            className={[
-              'inline-block py-[16px]',
-              device.map({ desktop: () => '', mobile: () => 'px-[20px]' }),
-            ]
-              .join(' ')
-              .trim()}
-            prefetch={false}
+          <NavbarContent
+            className="sm:hidden"
+            justify="start"
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
-            <div className="flex flex-row">
-              <Image src={LogoLight} alt="" height={32} priority={true} />
-            </div>
-            <h1 className="sr-only">HB저축은행</h1>
-          </Link>
-          <GlobalHeaderMenu
-            device={device.name}
-            className={device.map({
-              desktop: () => undefined,
-              mobile: () => 'grow',
-            })}
-          />
-        </Container>
+            <NavbarMenuToggle />
+          </NavbarContent>
+          <NavbarBrand>
+            <Text as="h2" variant="subtitle4" color="foreground">
+              KANG SIN GYU
+            </Text>
+          </NavbarBrand>
+          <NavbarContent className="hidden gap-4 sm:flex" justify="center">
+            {LinkList.map((link) => (
+              <NavbarItem key={link}>
+                <Link
+                  color="foreground"
+                  className="text-subtitle4"
+                  href={`#${link}`}
+                >
+                  {link}
+                </Link>
+              </NavbarItem>
+            ))}
+          </NavbarContent>
+          <NavbarContent justify="end">
+            <NavbarItem>
+              <SettingIcons />
+            </NavbarItem>
+          </NavbarContent>
+          <NavbarMenu>
+            {LinkList.map((item, index) => (
+              <NavbarMenuItem key={`${item}-${index}`}>
+                <Link
+                  className="w-full text-subtitle4"
+                  color="foreground"
+                  href={`#${item}`}
+                  size="lg"
+                  onPress={() => setIsMenuOpen(false)}
+                >
+                  {item}
+                </Link>
+              </NavbarMenuItem>
+            ))}
+          </NavbarMenu>
+        </Navbar>
       </header>
     </>
   )

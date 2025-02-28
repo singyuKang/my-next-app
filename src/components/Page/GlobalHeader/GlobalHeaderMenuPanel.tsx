@@ -2,7 +2,6 @@ import { HTMLAttributes } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { isNil } from 'ramda'
-import ArrowRightIcon from '@assets/icon/arrow_right.svg'
 import HeaderBannerBackgroundImg from '@assets/image/header/header_banner_background.png'
 import { Device, HasDevice } from '@common/device/Device'
 

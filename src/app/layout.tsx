@@ -8,7 +8,8 @@ import { SpinnerProvider } from '@/components/Spinner/SpinnerProvider'
 import { ModalProvider } from '@/components/Modal/ModalProvider'
 import { headers } from 'next/headers'
 import { GlobalHeader } from '@/components/Page/GlobalHeader/GlobalHeader'
-import { GlobalFooter } from '@/components/Page/GlobalFooter/GlobalFooter'
+import { NextUIProvders } from '@/components/Provider/NextUIProvider'
+import { NextThemeProvider } from '@/components/Provider/NextThemeProvider'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -23,42 +24,45 @@ export default async function RootLayout({
   const device = await Device.getDevice(headers())
 
   return (
-    <html lang="ko">
-      <body className="relative h-[100vh] overflow-y-scroll">
-        <SpinnerProvider backgroundColor="#000000">
-          <ModalProvider>
+    <html lang="ko" suppressHydrationWarning>
+      <body className="relative h-[100vh] overflow-y-scroll ">
+        <NextUIProvders>
+          <NextThemeProvider>
+            <SpinnerProvider backgroundColor="#000000">
+              <ModalProvider>
+                <div
+                  className={[
+                    'relative flex flex-col w-full',
+                    device.map({
+                      desktop: () => 'min-h-[100vh]',
+                      mobile: () => 'h-[100vh]',
+                    }),
+                  ]
+                    .join(' ')
+                    .trim()}
+                >
+                  <GlobalHeader device={device.name} />
+                  <div className="grow">{children}</div>
+                </div>
+              </ModalProvider>
+            </SpinnerProvider>
             <div
               className={[
-                'relative flex flex-col w-full',
+                'w-[48px] h-[48px] bg-white rounded-full fixed  z-30 flex justify-center items-center top-btn-box-shadow p-[12px]',
                 device.map({
-                  desktop: () => 'min-h-[100vh]',
-                  mobile: () => 'h-[100vh]',
+                  desktop: () => 'bottom-[40px] right-[50px]',
+                  mobile: () => 'bottom-[40px] right-[25px]',
                 }),
               ]
                 .join(' ')
                 .trim()}
             >
-              <GlobalHeader device={device.name} />
-              <div className="grow">{children}</div>
-              <GlobalFooter device={device.name} />
+              <Link href={'#'} className={'flex justify-center items-center '}>
+                <Image src={TopBtnIcon} alt="위로가기 아이콘" />
+              </Link>
             </div>
-          </ModalProvider>
-        </SpinnerProvider>
-        <div
-          className={[
-            'w-[48px] h-[48px] bg-white rounded-full fixed  z-30 flex justify-center items-center top-btn-box-shadow p-[12px]',
-            device.map({
-              desktop: () => 'bottom-[40px] right-[50px]',
-              mobile: () => 'bottom-[40px] right-[25px]',
-            }),
-          ]
-            .join(' ')
-            .trim()}
-        >
-          <Link href={'#'} className={'flex justify-center items-center '}>
-            <Image src={TopBtnIcon} alt="위로가기 아이콘" />
-          </Link>
-        </div>
+          </NextThemeProvider>
+        </NextUIProvders>
       </body>
     </html>
   )
