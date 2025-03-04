@@ -24,6 +24,7 @@ export default function SettingIcons() {
 export const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
+  console.log('🚀 ~ ThemeSwitcher ~ theme:', theme)
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light')

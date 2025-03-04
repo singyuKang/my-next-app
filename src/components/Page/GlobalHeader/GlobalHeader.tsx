@@ -22,10 +22,9 @@ export const GlobalHeader = ({
   ...props
 }: GlobalHeaderProps) => {
   const device = Device.of(rawDevice)
-  console.log('🚀 ~ device:', device)
   const className = [
     device.map({
-      desktop: () => 'border-b border-b-gray6 fixed top-0 left-0 right-0 z-20',
+      desktop: () => 'fixed top-0 left-0 right-0 z-20',
       mobile: () => 'fixed top-0 left-0 right-0 z-20',
     }),
     defaultClassName ?? '',

@@ -13,9 +13,19 @@ import { useTheme } from 'next-themes'
 import { Text } from '@/foundation/Text/Text'
 import { CustomSection } from '@/components/Section/CustomSection'
 import { CustomSectionTitle } from '@/components/Section/SectionTitle'
+import { useEffect, useState } from 'react'
 
 const IntroSection = () => {
   const { theme } = useTheme()
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  if (!isMounted) {
+    return null
+  }
 
   return (
     <div className="container py-8 mt-4">
@@ -46,25 +56,25 @@ const IntroSection = () => {
         </div>
         <div className="flex flex-1 max-h-[20rem] min-w-[21rem] mt-4 justify-center items-center">
           <div className="grid grid-cols-4 grid-rows-2 items-center justify-center gap-4">
-            <WaveCard duration={4}>
+            <WaveCard content="JavaScript" duration={4}>
               <Image src={JavaScriptIcon} alt="" height={30} width={30} />
             </WaveCard>
-            <WaveCard duration={4}>
+            <WaveCard content="TypeScript" duration={4}>
               <Image src={TypeScriptIcon} alt="" height={30} width={30} />
             </WaveCard>
-            <WaveCard duration={4}>
+            <WaveCard content="Swift" duration={4}>
               <Image src={SwiftIcon} alt="" height={30} width={30} />
             </WaveCard>
-            <WaveCard duration={4}>
+            <WaveCard content="React" duration={4}>
               <Image src={ReactIcon} alt="" height={30} width={30} />
             </WaveCard>
-            <WaveCard duration={4}>
+            <WaveCard content="ReactNative" duration={4}>
               <Image src={ReactIcon} alt="" height={30} width={30} />
             </WaveCard>
-            <WaveCard duration={4}>
+            <WaveCard content="NextJs" duration={4}>
               <Image src={NextJsIcon} alt="" height={30} width={30} />
             </WaveCard>
-            <WaveCard duration={4}>
+            <WaveCard content="Git" duration={4}>
               <Image
                 src={theme === 'light' ? GitIcon : GitDarkIcon}
                 alt=""
@@ -72,7 +82,7 @@ const IntroSection = () => {
                 width={30}
               />
             </WaveCard>
-            <WaveCard duration={4}>
+            <WaveCard content="Zeplin" duration={4}>
               <Image src={ZeplinIcon} alt="" height={30} width={30} />
             </WaveCard>
           </div>
