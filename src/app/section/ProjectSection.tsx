@@ -26,7 +26,7 @@ const ProjectSectionView = ({}: ProjectSectionVAProp) => {
     return (
       <TableRow key={'ibkLoan'}>
         <TableCell>
-          <Text variant="subtitle4">IBK저축은행 간편대출</Text>
+          <Text variant="subtitle5">IBK저축은행 간편대출</Text>
         </TableCell>
         <TableCell>
           <Text variant="body2" className="text-sm">
@@ -78,7 +78,7 @@ const ProjectSectionView = ({}: ProjectSectionVAProp) => {
     return (
       <TableRow key={'hbBankApp'}>
         <TableCell>
-          <Text variant="subtitle4">HB저축은행 앱</Text>
+          <Text variant="subtitle5">HB저축은행 앱</Text>
         </TableCell>
         <TableCell>
           <Text variant="body2" className="text-sm">
@@ -130,7 +130,7 @@ const ProjectSectionView = ({}: ProjectSectionVAProp) => {
     return (
       <TableRow key={'ibkBankApp'}>
         <TableCell>
-          <Text variant="subtitle4">IBK저축은행 앱</Text>
+          <Text variant="subtitle5">IBK저축은행 앱</Text>
         </TableCell>
         <TableCell>
           <Text variant="body2" className="text-sm">
@@ -179,8 +179,8 @@ const ProjectSectionView = ({}: ProjectSectionVAProp) => {
 
   return (
     <CustomSection id={'Project'}>
-      <CustomSectionTitle title={'PROJECT'} subTitle={'프로젝트 서브 타이틀'} />
-      <Table aria-label="customized table">
+      <CustomSectionTitle title={'PROJECT'} subTitle={''} />
+      <Table aria-label="customized project table">
         <TableHeader>
           {tableHeader.map((headerItem, index) => (
             <TableColumn key={index}>{headerItem}</TableColumn>

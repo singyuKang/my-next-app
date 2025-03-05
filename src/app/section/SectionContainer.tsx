@@ -8,7 +8,27 @@ import dynamic from 'next/dynamic'
 const DynamicLazyProjectSection = dynamic(
   () => import('@/app/section/ProjectSection'),
   {
-    loading: () => <p>loading...</p>,
+    ssr: false,
+  }
+)
+
+const DynamicLazyActivitySection = dynamic(
+  () => import('@/app/section/ActivitySection'),
+  {
+    ssr: false,
+  }
+)
+
+const DynamicLazyCertificateSection = dynamic(
+  () => import('@/app/section/CertificateSection'),
+  {
+    ssr: false,
+  }
+)
+
+const DynamicLazyEducationSection = dynamic(
+  () => import('@/app/section/EducationSection'),
+  {
     ssr: false,
   }
 )
@@ -20,6 +40,9 @@ const SectionContainer = ({ deviceClass }: { deviceClass: string }) => {
       <ExperienceSection />
       <Suspense fallback={`loading`}>
         <DynamicLazyProjectSection />
+        <DynamicLazyActivitySection />
+        <DynamicLazyCertificateSection />
+        <DynamicLazyEducationSection />
       </Suspense>
     </section>
   )
