@@ -33,7 +33,7 @@ const IntroSection = () => {
         <div className="flex flex-col items-center justify-center flex-1 gap-4 min-w-[40rem]">
           <Image
             className="rounded-full bg-[#add8e6]"
-            alt={'face image'}
+            alt={''}
             src={'/images/intro/character_white.png'}
             width={200}
             height={200}

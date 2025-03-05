@@ -14,16 +14,14 @@ import {
   TableHeader,
   TableRow,
 } from '@nextui-org/react'
-import { useTranslation } from 'react-i18next'
 
 const ExperienceSection = () => {
-  const { t } = useTranslation('translation', { keyPrefix: 'experience' })
   const tableHeaderItem = ['회사', '업무', '기여', '서비스']
 
   return (
     <CustomSection id={'Experience'}>
-      <CustomSectionTitle title={'Experience'} subTitle={t(``)} />
-      <Table>
+      <CustomSectionTitle title={'Experience'} />
+      <Table aria-label="경력 정보 테이블">
         <TableHeader>
           {tableHeaderItem.map((headerItem) => (
             <TableColumn key={headerItem} align="center">

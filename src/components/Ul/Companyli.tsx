@@ -48,10 +48,10 @@ export const Companyli = ({
             </Chip>
           ))}
         </div>
-        <div className="flex items-center gap-1 text-xs">
+        <div className="flex items-center gap-1 text-xs font-semibold">
           <HiOutlineCalendar />
           <Tooltip content={periodDurationDay} placement="right">
-            <p>
+            <p className="font-semibold">
               {periodStart} ~ {periodEnd}
             </p>
           </Tooltip>

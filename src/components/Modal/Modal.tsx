@@ -3,6 +3,7 @@ import CloseIcon from '@assets/icon/close.svg'
 import { Device, HasDevice } from '@common/device/Device'
 import { Button } from '@components/Button/Button'
 import { ButtonVariant } from '@components/Button/ButtonVariant'
+import Image from 'next/image'
 
 export interface ModalButtonProps {
   variant: ButtonVariant
@@ -47,6 +48,7 @@ export const Modal = ({
   ]
     .join(' ')
     .trim()
+
   return (
     <article
       {...props}
@@ -63,9 +65,8 @@ export const Modal = ({
             onClick={onClickClose ? onClickClose : () => null}
           >
             <div className="flex w-[32px] h-[32px] justify-center items-center">
-              <div className="w-[16px] h-[16px] text-gray5">
-                {/* <CloseIcon /> */}
-                <></>
+              <div className="w-[16px] h-[16px] ">
+                <Image src={CloseIcon} alt="" height={30} width={30} />
               </div>
             </div>
           </div>
@@ -75,6 +76,7 @@ export const Modal = ({
         className={[
           'grow px-[24px] pb-[8px]',
           showCloseButton ? 'pt-[12px]' : 'pt-[24px]',
+          'text-black',
         ]
           .join(' ')
           .trim()}

@@ -10,6 +10,10 @@ import {
   useDisclosure,
 } from '@nextui-org/react'
 import * as React from 'react'
+import { useModalContext } from '../Modal/ModalProvider'
+import { AlertModal } from '../Modal/Alert/AlertModal'
+import { Text } from '@/foundation/Text/Text'
+import { ViewModal } from '../Modal/View/ViewModal'
 
 interface ExtraInfoDialogProp {
   iconType?: 'paper' | 'prize' | 'contribution'
@@ -25,6 +29,7 @@ export default function ExtraInfoDialog({
   children,
 }: ExtraInfoDialogProp) {
   const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure()
+  const { open, close } = useModalContext()
 
   let Icon = <DescriptionOutlinedIcon color="primary" />
 
@@ -45,10 +50,32 @@ export default function ExtraInfoDialog({
 
   return (
     <>
-      <Button isIconOnly onPress={onOpen} variant="light" size="sm">
+      <Button
+        isIconOnly
+        onPress={() => {
+          // onOpen()
+
+          open(
+            'extraInfoDialog',
+            <ViewModal
+              device="desktop"
+              button={{
+                label: '동의',
+                onClick: () => {
+                  close('checked')
+                },
+              }}
+            >
+              <div>{children}</div>
+            </ViewModal>
+          )
+        }}
+        variant="light"
+        size="sm"
+      >
         {Icon}
       </Button>
-      <Modal
+      {/* <Modal
         isOpen={isOpen}
         onClose={onClose}
         size={size}
@@ -61,7 +88,7 @@ export default function ExtraInfoDialog({
           </ModalHeader>
           <ModalBody className="p-6 pt-0">{children}</ModalBody>
         </ModalContent>
-      </Modal>
+      </Modal> */}
     </>
   )
 }

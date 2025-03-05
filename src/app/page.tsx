@@ -2,8 +2,6 @@ import { headers } from 'next/headers'
 import { Container } from 'src/components/Container/Container'
 import { Page } from 'src/components/Page/Page'
 import { Device } from 'src/modules/common/device/Device'
-import IntroSection from './section/IntroSection'
-import ExperienceSection from './section/ExperienceSection'
 import SectionContainer from './section/SectionContainer'
 
 export default async function Home() {

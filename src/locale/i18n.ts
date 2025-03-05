@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import i18next from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
@@ -25,7 +26,7 @@ const mergeLocaleResource = () => {
   targetRes.forEach(
     (res: { namespace: string; locale: { [x: string]: any } }) => {
       const namespace = res.namespace
-      for (let key in res.locale) {
+      for (const key in res.locale) {
         const newLocale = res.locale[key]
         if (key in resources) {
           resources[key] = {

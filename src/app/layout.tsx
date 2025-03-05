@@ -5,11 +5,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import TopBtnIcon from '@assets/icon/main/top_btn.png'
 // import { SpinnerProvider } from '@/components/Spinner/SpinnerProvider'
-// import { ModalProvider } from '@/components/Modal/ModalProvider'
+import { ModalProvider } from '@/components/Modal/ModalProvider'
 import { headers } from 'next/headers'
 import { GlobalHeader } from '@/components/Page/GlobalHeader/GlobalHeader'
 import { NextUIProvders } from '@/components/Provider/NextUIProvider'
 import { NextThemeProvider } from '@/components/Provider/NextThemeProvider'
+// import { ModalProvider } from '@nextui-org/react'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -29,22 +30,22 @@ export default async function RootLayout({
         <NextUIProvders>
           <NextThemeProvider>
             {/* <SpinnerProvider backgroundColor="#000000"> */}
-            {/* <ModalProvider> */}
-            <div
-              className={[
-                'relative flex flex-col w-full',
-                device.map({
-                  desktop: () => 'min-h-[100vh]',
-                  mobile: () => 'h-[100vh]',
-                }),
-              ]
-                .join(' ')
-                .trim()}
-            >
-              <GlobalHeader device={device.name} />
-              <div className="grow">{children}</div>
-            </div>
-            {/* </ModalProvider> */}
+            <ModalProvider>
+              <div
+                className={[
+                  'relative flex flex-col w-full',
+                  device.map({
+                    desktop: () => 'min-h-[100vh]',
+                    mobile: () => 'h-[100vh]',
+                  }),
+                ]
+                  .join(' ')
+                  .trim()}
+              >
+                <GlobalHeader device={device.name} />
+                <div className="grow">{children}</div>
+              </div>
+            </ModalProvider>
             {/* </SpinnerProvider> */}
             <div
               className={[

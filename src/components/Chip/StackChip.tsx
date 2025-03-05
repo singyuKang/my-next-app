@@ -7,7 +7,7 @@ import jsIcon from '@/assets/icon/javascript.svg'
 import styledIcon from '@/assets/icon/styledcomponent.svg'
 import reactQueryIcon from '@/assets/icon/reactquery.svg'
 import reduxIcon from '@/assets/icon/redux.svg'
-import recoilIcon from '@/assets/icon/checked.svg'
+import recoilIcon from '@/assets/icon/more.svg'
 import gitIcon from '@/assets/icon/github.svg'
 import tailwindIcon from '@/assets/icon/tailwind.svg'
 import axiosIcon from '@/assets/icon/axios.svg'
@@ -31,7 +31,7 @@ const stackIcons: { [key: string]: string } = {
   axios: axiosIcon,
 }
 
-export const StackChip = ({ title, stackList, size = 25 }: StackChipProp) => {
+export const StackChip = ({ title, stackList, size = 20 }: StackChipProp) => {
   return (
     <div className="mt-2">
       {title && <span className="text-sm"># {title}</span>}
@@ -44,6 +44,7 @@ export const StackChip = ({ title, stackList, size = 25 }: StackChipProp) => {
                 height={size}
                 width={size}
                 alt={stack}
+                style={{ width: size, height: size }}
               />
             </div>
           </Tooltip>
