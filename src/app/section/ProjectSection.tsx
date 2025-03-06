@@ -29,7 +29,7 @@ const ProjectSectionView = ({}: ProjectSectionVAProp) => {
           <Text variant="subtitle5">IBK저축은행 간편대출</Text>
         </TableCell>
         <TableCell>
-          <Text variant="body2" className="text-sm">
+          <Text variant="body2" className="text-sm font-semibold">
             React 기반 IBK-저축은행 간편 대출신청 웹 개발
           </Text>
           <StackChip
@@ -81,7 +81,7 @@ const ProjectSectionView = ({}: ProjectSectionVAProp) => {
           <Text variant="subtitle5">HB저축은행 앱</Text>
         </TableCell>
         <TableCell>
-          <Text variant="body2" className="text-sm">
+          <Text variant="body2" className="text-sm font-semibold">
             React Native + TypeScript를 사용하여 HB저축은행 모바일 앱 개발
           </Text>
           <StackChip
@@ -133,7 +133,7 @@ const ProjectSectionView = ({}: ProjectSectionVAProp) => {
           <Text variant="subtitle5">IBK저축은행 앱</Text>
         </TableCell>
         <TableCell>
-          <Text variant="body2" className="text-sm">
+          <Text variant="body2" className="text-sm font-semibold">
             React Native + JavaScript를 사용하여 IBK저축은행 모바일 앱 개발
           </Text>
           <StackChip

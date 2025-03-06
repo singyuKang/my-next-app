@@ -22,14 +22,14 @@ const ActivitySection = () => {
           <Text variant="subtitle5">알고리즘 스터디</Text>
         </TableCell>
         <TableCell>
-          <Text variant="body2" className="text-sm">
+          <Text variant="body2" className="text-sm font-semibold">
             · 7개월간 주 5문제씩 알고리즘 문제 해결, 팀원들과 토론을 통해 코드
             개선
           </Text>
-          <Text variant="body2" className="text-sm">
+          <Text variant="body2" className="text-sm font-semibold">
             · 프로그래머스 216문제, 백준 265문제 해결
           </Text>
-          <Text variant="body2" className="text-sm">
+          <Text variant="body2" className="text-sm font-semibold">
             · Solved AC 골드2 달성
           </Text>
         </TableCell>
@@ -71,10 +71,10 @@ const ActivitySection = () => {
           <Text variant="subtitle5">우아한테크코스 7기 웹 프리코스</Text>
         </TableCell>
         <TableCell>
-          <Text variant="body2" className="text-sm">
+          <Text variant="body2" className="text-sm font-semibold">
             · Javascript 프로그래밍 기술
           </Text>
-          <Text variant="body2" className="text-sm">
+          <Text variant="body2" className="text-sm font-semibold">
             · Jest를 활용한 단위 테스트 경험
           </Text>
         </TableCell>

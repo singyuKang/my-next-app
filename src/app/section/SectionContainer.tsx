@@ -19,6 +19,13 @@ const DynamicLazyActivitySection = dynamic(
   }
 )
 
+const DynamicLazyBlogSection = dynamic(
+  () => import('@/app/section/BlogSection'),
+  {
+    ssr: false,
+  }
+)
+
 const DynamicLazyCertificateSection = dynamic(
   () => import('@/app/section/CertificateSection'),
   {
@@ -41,6 +48,7 @@ const SectionContainer = ({ deviceClass }: { deviceClass: string }) => {
       <Suspense fallback={`loading`}>
         <DynamicLazyProjectSection />
         <DynamicLazyActivitySection />
+        <DynamicLazyBlogSection />
         <DynamicLazyCertificateSection />
         <DynamicLazyEducationSection />
       </Suspense>

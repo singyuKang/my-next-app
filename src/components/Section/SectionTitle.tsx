@@ -27,7 +27,7 @@ export const CustomSectionTitle = ({ title, subTitle }: SectionTitleProp) => {
           {title.toLocaleUpperCase()}
         </div>
       )}
-      {subTitle && <Text variant="subtitle3">{subTitle} </Text>}
+      {subTitle && <Text variant="subtitle5">{subTitle} </Text>}
     </div>
   )
 }

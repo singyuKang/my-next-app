@@ -1,6 +1,5 @@
 import { Text } from '@/foundation/Text/Text'
 import { useTheme } from 'next-themes'
-import { MdOutlineWorkOutline } from 'react-icons/md'
 
 interface TitleliProp {
   title?: string
@@ -26,9 +25,12 @@ export const Titleli = ({ title, list = [] }: TitleliProp) => {
       <div className="flex flex-col flex-1 gap-1 p-2">
         {list.map((item, index) => (
           <div key={index} className="flex items-center gap-1">
-            <MdOutlineWorkOutline size={12} />
-            <Text as="span" variant="body2" className="text-sm font-semibold">
-              {item}
+            <Text
+              as="span"
+              variant="body2"
+              className="text-sm font-semibold text-left"
+            >
+              · {item}
             </Text>
           </div>
         ))}

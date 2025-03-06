@@ -34,7 +34,7 @@ const ExperienceSection = () => {
             <TableCell>
               <Companyli
                 name={'엔투소프트'}
-                homepageUrl={'https://www.n2soft.co.kr/'}
+                homepageUrl={'https://www.n2soft.co.kr'}
                 position={['프론트엔드 개발자']}
                 period={{
                   start: '2022/08',
