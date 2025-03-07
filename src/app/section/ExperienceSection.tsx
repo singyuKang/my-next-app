@@ -58,7 +58,7 @@ const ExperienceSection = () => {
                 <Titleli
                   title={'What I learn'}
                   list={[
-                    'React, Next, Typescript 기반의  웹 앱',
+                    'React, React-Native, Typescript 기반의  웹/앱',
                     'MSA 아키텍체와의 원활한 JSON 상하차',
                     'Eslint부터 Stortbook, React-testing-library를 이용한 지속 가능한 소프트웨어',
                     '오디오을 사용한 모던 웹사이트 개발 경험',
@@ -88,26 +88,30 @@ const ExperienceSection = () => {
               </ExtraInfoDialog>
             </TableCell>
             <TableCell align="center">
-              <ExtraInfoDialog
-                dialogTitle={'AI 오디오 서비스 : 가우디오 스튜디오'}
-              >
-                <Titleli
-                  title={'서비스 목표'}
-                  list={[
-                    'AI를 활용한 음원 분리 기능 제공',
-                    'AI를 활용한 노래방 기능 제공',
-                    '사내에서 개발중 인 AI 기능 및 서비스의 런칭',
-                  ]}
-                />
-                <div className="flex flex-row justify-center">
-                  <UrlChip
-                    title={'홈페이지'}
-                    url={'https://studio.gaudiolab.io/'}
+              <ExtraInfoDialog dialogTitle={'엔투소프트'}>
+                <div>
+                  <Titleli
+                    title={'IBK저축은행 간편대출 모바일 웹'}
+                    list={['AI를 활용한 음원 분리 기능 제공']}
                   />
-                  <UrlChip
-                    title={'서비스 소개'}
-                    url={'https://www.youtube.com/watch?v=R_5wSIYxSuc'}
+                  <div className="flex flex-row ">
+                    <UrlChip
+                      title={'홈페이지'}
+                      url={'https://webloan.ibksb.co.kr/?GOODS_CD=760143'}
+                    />
+                  </div>
+                </div>
+                <div>
+                  <Titleli
+                    title={'서비스 목표'}
+                    list={['AI를 활용한 음원 분리 기능 제공']}
                   />
+                  <div className="flex flex-row ">
+                    <UrlChip
+                      title={'홈페이지'}
+                      url={'https://studio.gaudiolab.io/'}
+                    />
+                  </div>
                 </div>
               </ExtraInfoDialog>
             </TableCell>

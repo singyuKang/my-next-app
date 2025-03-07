@@ -14,6 +14,7 @@ import { Text } from '@/foundation/Text/Text'
 import { CustomSection } from '@/components/Section/CustomSection'
 import { CustomSectionTitle } from '@/components/Section/SectionTitle'
 import { useEffect, useState } from 'react'
+import profileImage from '@assets/image/profile.png'
 
 const IntroSection = () => {
   const { theme } = useTheme()
@@ -31,9 +32,9 @@ const IntroSection = () => {
     return (
       <div className="flex flex-col items-center justify-center flex-1 gap-4 min-w-[40rem]">
         <Image
-          className="rounded-full bg-[#add8e6]"
+          className="rounded-full bg-[#d5d9db]"
           alt={''}
-          src={'/images/intro/character_white.png'}
+          src={profileImage}
           width={200}
           height={200}
           layout={'fixed'}
@@ -44,12 +45,10 @@ const IntroSection = () => {
             사용자의 편리함을 추구하는 개발자,{' '}
             <Text as="span" variant="subtitle1" color="blue">
               강신규
-            </Text>{' '}
+            </Text>
             입니다
           </Text>
-          <Text variant="subtitle2">
-            Web과 App를 다루는 3년차 개발자입니다.
-          </Text>
+
           <div className="text-sm font-light text-gray-600 dark:text-gray-300"></div>
         </div>
       </div>
@@ -96,7 +95,7 @@ const IntroSection = () => {
 
   return (
     <div>
-      <div className="flex flex-wrap w-full min-h-[30rem] ">
+      <div className="flex flex-wrap w-full min-h-[30rem] mt-2">
         {photoBox()}
         {stackBox()}
       </div>
@@ -108,7 +107,7 @@ const IntroSection = () => {
         <div className="flex flex-col flex-wrap w-full justify-evenly">
           <div className="text-sm font-normal w-full flex flex-col gap-6">
             <Text variant="subtitle5">
-              저는 React-Native , React를 사용해 3개의 앱/웹을 성공적으로 출시,
+              저는 React, React-Native 를 사용해 3개의 웹/앱을 성공적으로 출시,
               개발 및 유지보수하며 50만+ 다운로드를 달성한 경험이 있습니다.
             </Text>
             <Text variant="subtitle5">
@@ -116,6 +115,11 @@ const IntroSection = () => {
               블로그를 통해 최신 기술 트렌드를 학습하고 공부한 내용을 정리하고
               있습니다.
             </Text>
+            {/* <Text variant="subtitle5">
+              디자이너, PM, 백엔드 개발자와의 협업 경험을 바탕으로 다양한 팀과
+              원활한 커뮤니케이션을 유지하며, 최적의 결과물을 도출하기 위해
+              노력합니다.
+            </Text> */}
           </div>
         </div>
       </CustomSection>
