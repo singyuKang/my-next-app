@@ -34,7 +34,7 @@ const stackIcons: { [key: string]: string } = {
 export const StackChip = ({ title, stackList, size = 20 }: StackChipProp) => {
   return (
     <div className="mt-2">
-      {title && <span className="text-sm"># {title}</span>}
+      {title && <span className="text-sm font-semibold"># {title}</span>}
       <div className="flex flex-row flex-wrap gap-1">
         {stackList.map((stack, index) => (
           <Tooltip key={index} content={stack}>

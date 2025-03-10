@@ -45,13 +45,15 @@ const ProjectSectionView = ({}: ProjectSectionVAProp) => {
         </TableCell>
 
         <TableCell>
-          <ExtraInfoDialog dialogTitle={'오디오 솔루션'}>
+          <ExtraInfoDialog
+            dialogTitle={'IBK-저축은행 대출신청 - 2024.02~ 2024.06(5개월)'}
+          >
             <Titleli
-              title={'개발 목표'}
+              title={'주요 업무 및 성과'}
               list={[
-                '다양한 미디어 파일 지원 및 스트리밍 서비스 제공',
-                '웹 기반 플레이어, 에디터 기능 제공',
-                '돈을 버는 서비스 구축',
+                'React 기반 IBK-저축은행 대출신청 웹 애플리케이션 개발 및 유지보수',
+                '일일 대출 신청 건수 510건 달성',
+                '',
               ]}
             />
             <Titleli
