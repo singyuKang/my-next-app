@@ -35,11 +35,10 @@ export const GlobalHeader = ({
   const LinkList = [
     'Experience',
     'Project',
-    'Skill',
-    'Award',
-    'Certificate',
-    'Retrospective',
+    'Activity',
     'Blog',
+    'Certificate',
+    'Education',
   ]
 
   return (

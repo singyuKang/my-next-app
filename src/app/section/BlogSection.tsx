@@ -31,7 +31,7 @@ const BlogSectionView = ({}: BlogSectionVAProp) => {
         src="https://singyukang.tistory.com/"
         width={'100%'}
         height={'100%'}
-        style={{ minHeight: '400px' }}
+        style={{ minHeight: '400px', background: 'white' }}
       />
     </CustomSection>
   )

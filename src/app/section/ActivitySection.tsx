@@ -75,6 +75,35 @@ const ActivitySection = () => {
     )
   }
 
+  const ThirdActivityView = () => {
+    return (
+      <TableRow key={'naverboostcamp'}>
+        <TableCell>
+          <Text variant="subtitle5">네이버 부스트캠프 iOS 베이직 과정</Text>
+        </TableCell>
+        <TableCell>
+          <Text variant="body2" className="text-sm font-semibold">
+            · Swift 프로그래밍 기술
+          </Text>
+          <Text variant="body2" className="text-sm font-semibold">
+            · 팀 과제를 통해 커뮤니케이션과 문제 해결의 중요성
+          </Text>
+        </TableCell>
+
+        <TableCell>
+          <Link
+            href={
+              'https://gist.github.com/singyuKang/bbff61ea299448420e8409c80b69b454'
+            }
+            target="_blank"
+          >
+            <DescriptionIcon color="primary" />
+          </Link>
+        </TableCell>
+      </TableRow>
+    )
+  }
+
   return (
     <CustomSection id={'Activity'}>
       <CustomSectionTitle title={'Activity'} />
@@ -87,6 +116,7 @@ const ActivitySection = () => {
         <TableBody>
           {FirstActivityView()}
           {SecondActivityView()}
+          {ThirdActivityView()}
         </TableBody>
       </Table>
     </CustomSection>

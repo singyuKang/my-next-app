@@ -30,7 +30,7 @@ const ProjectSectionView = ({}: ProjectSectionVAProp) => {
         </TableCell>
         <TableCell>
           <Text variant="body2" className="text-sm font-semibold">
-            React 기반 IBK-저축은행 간편 대출신청 웹 개발
+            React 기반 IBK-저축은행 간편 대출신청 모바일 웹 개발
           </Text>
           <StackChip
             stackList={[
@@ -49,25 +49,29 @@ const ProjectSectionView = ({}: ProjectSectionVAProp) => {
             dialogTitle={'IBK-저축은행 대출신청 - 2024.02~ 2024.06(5개월)'}
           >
             <Titleli
-              title={'주요 업무 및 성과'}
+              title={'주요 업무'}
               list={[
                 'React 기반 IBK-저축은행 대출신청 웹 애플리케이션 개발 및 유지보수',
-                '일일 대출 신청 건수 510건 달성',
-                '',
+                '보이스피싱 방지, 대출자가진단, 휴대폰인증, 약관동의, 신분증촬영, 정보입력 페이지 제작',
+                'Recoil을 사용해 공통 컴포넌트 Alert, PopUp, Loading 구현',
+                '외부 인증 서비스 연동을 통해 신분증 인증 프로세스 구현 및 리다이렉트 처리',
+                '대출 재신청시 처음부터 다시 시작해야 되는 불편함 발생하여 신청번호를 기준으로 대출 이어하기 페이지 제작하여 사용자에게 편의성 제공',
+              ]}
+            />
+            <Titleli
+              title={'트러블 슈팅'}
+              list={[
+                '신분증 인증 또는 새로고침시 Recoil 데이터 손실문제 발생하여 sessionStorage를 사용해 이탈율 감소에 기여',
+                '삼성 인터넷 다크모드에서 SVG 기반 Lottie 애니메이션의 색상 왜곡 문제를 Canvas 렌더링 방식으로 변경하여 해결하고, 안정적인 사용자 경험을 제공',
+                '사용자가 버튼을 여러 번 클릭하여 API 중복 호출 문제 발생, Debounce를 적용해 추가 클릭을 차단하여 서버 부하 감소 + 호출문제 해결',
+                'JWT 토큰을 통해 휴대폰 인증후(로그인) 안전하게 서비스를 이용할 수 있도록 개선',
               ]}
             />
             <Titleli
               title={'개발 성과'}
               list={[
-                '무료서비스 -> 유료서비스 전환 성공',
-                'MAU 20만 달성, 매출 N억 달성',
-              ]}
-            />
-            <Titleli
-              title={'내 기여도'}
-              list={[
-                '프론트엔드 단독개발 -> 프론트엔드 리드 담당',
-                '코어 기능 개발(웹 오디오, 플레이어)',
+                '대출신청 전환율 20% 달성',
+                '일일 대출 신청 건수 최대 510건 달성',
               ]}
             />
           </ExtraInfoDialog>
@@ -99,27 +103,32 @@ const ProjectSectionView = ({}: ProjectSectionVAProp) => {
         </TableCell>
 
         <TableCell>
-          <ExtraInfoDialog dialogTitle={'오디오 솔루션'}>
+          <ExtraInfoDialog
+            dialogTitle={'HB저축은행 앱 - 2023.05 ~ 2023.12(8개월)'}
+          >
             <Titleli
-              title={'개발 목표'}
+              title={'주요 업무'}
               list={[
-                '다양한 미디어 파일 지원 및 스트리밍 서비스 제공',
-                '웹 기반 플레이어, 에디터 기능 제공',
-                '돈을 버는 서비스 구축',
+                'React Native를 사용하여 HB-저축은행 모바일 앱 개발 및 유지보수',
+                '상품안내, 전계좌조회, 계좌상세, 증명서발급, 약관, 주소검색, 대출철회, 대출상환, 대출상환 스케줄 조회 페이지 제작',
+                'CodePush를 활용해 고객사 요청사항을 실시간으로 빠르게 반영',
+              ]}
+            />
+            <Titleli
+              title={'트러블 슈팅'}
+              list={[
+                'JavaScript 코드를 TypeScript로 마이그레이션하여 코드의 안정성 향상, 개발 과정에서의 오류 발견을 용이',
+                'RESTful API와 React Query 데이터 캐싱으로 로딩 시간이 길었던 전계좌조회 API 호출 횟수를 줄이고, 속도를 30% (약 3초) 개선',
+                'WebView, injectedJavaScript, postMessage를 활용하여 앱 내에서 전자 계약 서명 기능을 구현, 사용자가 앱을 벗어나지 않고 서명을 완료가능하도록 구현',
+                'React Native Bridge를 활용하여 금융 앱에 필요한 보안 네이티브 모듈을 크로스 플랫폼에서 사용 가능하도록 구현',
+                '금융 상품 탐색 과정을 완전 탐색에서 이진 탐색으로 변경하여 탐색 속도를 0.02초 단축시키고 사용자 경험을 개선',
               ]}
             />
             <Titleli
               title={'개발 성과'}
               list={[
-                '무료서비스 -> 유료서비스 전환 성공',
-                'MAU 20만 달성, 매출 N억 달성',
-              ]}
-            />
-            <Titleli
-              title={'내 기여도'}
-              list={[
-                '프론트엔드 단독개발 -> 프론트엔드 리드 담당',
-                '코어 기능 개발(웹 오디오, 플레이어)',
+                'App Center 기준 Android 4500명, iOS 850명 Active Devices 증가',
+                '앱을 통한 신규 예금 계좌 개설 20% 증가, 대출 건수 30% 증가',
               ]}
             />
           </ExtraInfoDialog>
@@ -150,27 +159,29 @@ const ProjectSectionView = ({}: ProjectSectionVAProp) => {
         </TableCell>
 
         <TableCell>
-          <ExtraInfoDialog dialogTitle={'오디오 솔루션'}>
+          <ExtraInfoDialog
+            dialogTitle={'IBK-저축은행 앱 - 2022.08 ~ 2023.02(7개월)'}
+          >
             <Titleli
-              title={'개발 목표'}
+              title={'주요 업무'}
               list={[
-                '다양한 미디어 파일 지원 및 스트리밍 서비스 제공',
-                '웹 기반 플레이어, 에디터 기능 제공',
-                '돈을 버는 서비스 구축',
+                'React Native를 사용하여 IBK-저축은행 앱 개발 및 유지보수',
+                '예금/대출 상품, 상품 안내, 수신상품 신청, 거래내역, 만기 수령 예상액 계산, 약관 페이지 제작',
+                'CodePush를 통해 고객사 요청사항을 실시간으로 빠르게 반영',
+              ]}
+            />
+            <Titleli
+              title={'트러블 슈팅'}
+              list={[
+                'Context API를 활용해 Alert, Loading, Toast 공통 컴포넌트 구현',
+                '약관이 자주 변경되는 문제를 해결하기 위해 WebView를 사용하여 약관 동의 화면을 구현하였고, 이를 통해 약관 내용 변경 시 앱 업데이트 없이 즉시 반영이 가능하도록 개선',
               ]}
             />
             <Titleli
               title={'개발 성과'}
               list={[
-                '무료서비스 -> 유료서비스 전환 성공',
-                'MAU 20만 달성, 매출 N억 달성',
-              ]}
-            />
-            <Titleli
-              title={'내 기여도'}
-              list={[
-                '프론트엔드 단독개발 -> 프론트엔드 리드 담당',
-                '코어 기능 개발(웹 오디오, 플레이어)',
+                '구글플레이 50만 다운로드 달성',
+                '앱을 통한 신규 예금 계좌 개설 30% 증가, 대출 건수 30% 증가',
               ]}
             />
           </ExtraInfoDialog>
