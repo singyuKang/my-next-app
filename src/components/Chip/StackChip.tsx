@@ -11,6 +11,7 @@ import recoilIcon from '@/assets/icon/more.svg'
 import gitIcon from '@/assets/icon/github.svg'
 import tailwindIcon from '@/assets/icon/tailwind.svg'
 import axiosIcon from '@/assets/icon/axios.svg'
+import webpackIcon from '@/assets/icon/webpack.svg'
 
 interface StackChipProp {
   title?: string
@@ -29,6 +30,7 @@ const stackIcons: { [key: string]: string } = {
   github: gitIcon,
   tailwind: tailwindIcon,
   axios: axiosIcon,
+  webpack: webpackIcon,
 }
 
 export const StackChip = ({ title, stackList, size = 20 }: StackChipProp) => {

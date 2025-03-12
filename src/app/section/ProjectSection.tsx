@@ -39,6 +39,7 @@ const ProjectSectionView = ({}: ProjectSectionVAProp) => {
               'Recoil',
               'Tailwind',
               'Axios',
+              'Webpack',
               'GitHub',
             ]}
           />
@@ -53,7 +54,7 @@ const ProjectSectionView = ({}: ProjectSectionVAProp) => {
               list={[
                 'React 기반 IBK-저축은행 대출신청 웹 애플리케이션 개발 및 유지보수',
                 '보이스피싱 방지, 대출자가진단, 휴대폰인증, 약관동의, 신분증촬영, 정보입력 페이지 제작',
-                'Recoil을 사용해 공통 컴포넌트 Alert, PopUp, Loading 구현',
+                'Recoil을 사용해 공통 컴포넌트 Alert, PopUp, Loading 구현, 대출신청시 필요한 데이터 관리',
                 '외부 인증 서비스 연동을 통해 신분증 인증 프로세스 구현 및 리다이렉트 처리',
                 '대출 재신청시 처음부터 다시 시작해야 되는 불편함 발생하여 신청번호를 기준으로 대출 이어하기 페이지 제작하여 사용자에게 편의성 제공',
               ]}
@@ -166,15 +167,18 @@ const ProjectSectionView = ({}: ProjectSectionVAProp) => {
               title={'주요 업무'}
               list={[
                 'React Native를 사용하여 IBK-저축은행 앱 개발 및 유지보수',
-                '예금/대출 상품, 상품 안내, 수신상품 신청, 거래내역, 만기 수령 예상액 계산, 약관 페이지 제작',
+                '예금/대출 상품, 상품 안내, 거래내역, 만기 수령 예상액 계산, 약관 페이지 제작',
+                '수신상품 신청과정 구현(상품 사전안내 -> 약관동의 -> 신청 주소 입력 -> 계좌비밀번호 설정, 뱅킹 설정 -> 최종신청 완료)',
+                'Sentry를 통한 Application 에러 트래킹',
                 'CodePush를 통해 고객사 요청사항을 실시간으로 빠르게 반영',
               ]}
             />
             <Titleli
               title={'트러블 슈팅'}
               list={[
-                'Context API를 활용해 Alert, Loading, Toast 공통 컴포넌트 구현',
-                '약관이 자주 변경되는 문제를 해결하기 위해 WebView를 사용하여 약관 동의 화면을 구현하였고, 이를 통해 약관 내용 변경 시 앱 업데이트 없이 즉시 반영이 가능하도록 개선',
+                'Context API 활용 : Alert, Loading, Toast 공통 컴포넌트 구현을 통해 코드 중복 제거 및 유지보수성 향상',
+                '약관 동의 화면 개선 : WebView를 사용하여 약관 내용 변경 시 앱 업데이트 없이 즉시 반영 가능하도록 개선',
+                '수신상품 신청 데이터 관리 : Redux를 사용하여 페이지 간 데이터 전달의 불편함 해소 및 상태 관리 개선.',
               ]}
             />
             <Titleli
