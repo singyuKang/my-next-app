@@ -57,7 +57,7 @@ export const GlobalHeader = ({
           >
             <NavbarMenuToggle />
           </NavbarContent>
-          <NavbarBrand>
+          <NavbarBrand className="flex  justify-center h-full">
             <Text as="h2" variant="subtitle4" color="foreground">
               KANG SIN GYU
             </Text>
