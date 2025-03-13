@@ -103,8 +103,8 @@ const IntroSection = () => {
   }
 
   return (
-    <div>
-      <div className="flex flex-wrap w-full min-h-[30rem] mt-2  max-w-[1200px] justify-center items-center">
+    <div className="flex flex-col flex-1 justify-center items-center">
+      <div className="flex flex-wrap flex-1 w-full min-h-[30rem] mt-2  max-w-[1200px] justify-center items-center">
         {photoBox()}
         {stackBox()}
       </div>
