@@ -24,7 +24,7 @@ const IntroSection = () => {
 
   const photoBox = () => {
     return (
-      <div className="flex flex-col items-center justify-center flex-1 gap-4 min-w-[40rem] ">
+      <div className="flex flex-col items-center justify-center flex-1 gap-4 min-w-[40rem] mt-4">
         <Image
           className="rounded-full bg-[#d5d9db]"
           alt={''}
