@@ -1,20 +1,14 @@
 'use client'
 import WaveCard from '@/components/Card/WaveCard'
 import Image from 'next/image'
-import JavaScriptIcon from '@assets/icon/javascript.svg'
-import TypeScriptIcon from '@assets/icon/typescript.svg'
-import ReactIcon from '@assets/icon/react.svg'
-import SwiftIcon from '@assets/icon/swift.svg'
-import NextJsIcon from '@assets/icon/next-js.svg'
-import GitIcon from '@assets/icon/github.svg'
 import GitDarkIcon from '@assets/icon/github-mark-white.png'
-import ZeplinIcon from '@assets/icon/zeplin.svg'
 import { useTheme } from 'next-themes'
 import { Text } from '@/foundation/Text/Text'
 import { CustomSection } from '@/components/Section/CustomSection'
 import { CustomSectionTitle } from '@/components/Section/SectionTitle'
 import { useEffect, useState } from 'react'
 import profileImage from '@assets/image/profile.png'
+import { stackIcons } from '@/utils/getsvgIcon'
 
 const IntroSection = () => {
   const { theme } = useTheme()
@@ -60,33 +54,48 @@ const IntroSection = () => {
       <div className="flex flex-1 max-h-[20rem] min-w-[21rem] mt-4 justify-center items-center">
         <div className="grid grid-cols-4 grid-rows-2 items-center justify-center gap-4">
           <WaveCard content="JavaScript" duration={4}>
-            <Image src={JavaScriptIcon} alt="" height={30} width={30} />
+            <Image
+              src={stackIcons['javascript']}
+              alt=""
+              height={30}
+              width={30}
+            />
           </WaveCard>
           <WaveCard content="TypeScript" duration={4}>
-            <Image src={TypeScriptIcon} alt="" height={30} width={30} />
+            <Image
+              src={stackIcons['typescript']}
+              alt=""
+              height={30}
+              width={30}
+            />
           </WaveCard>
           <WaveCard content="Swift" duration={4}>
-            <Image src={SwiftIcon} alt="" height={30} width={30} />
+            <Image src={stackIcons['swift']} alt="" height={30} width={30} />
           </WaveCard>
           <WaveCard content="React" duration={4}>
-            <Image src={ReactIcon} alt="" height={30} width={30} />
+            <Image src={stackIcons['react']} alt="" height={30} width={30} />
           </WaveCard>
           <WaveCard content="ReactNative" duration={4}>
-            <Image src={ReactIcon} alt="" height={30} width={30} />
+            <Image
+              src={stackIcons['reactnative']}
+              alt=""
+              height={30}
+              width={30}
+            />
           </WaveCard>
           <WaveCard content="NextJs" duration={4}>
-            <Image src={NextJsIcon} alt="" height={30} width={30} />
+            <Image src={stackIcons['nextjs']} alt="" height={30} width={30} />
           </WaveCard>
           <WaveCard content="Git" duration={4}>
             <Image
-              src={theme === 'light' ? GitIcon : GitDarkIcon}
+              src={theme === 'light' ? stackIcons['github'] : GitDarkIcon}
               alt=""
               height={30}
               width={30}
             />
           </WaveCard>
           <WaveCard content="Zeplin" duration={4}>
-            <Image src={ZeplinIcon} alt="" height={30} width={30} />
+            <Image src={stackIcons['zeplin']} alt="" height={30} width={30} />
           </WaveCard>
         </div>
       </div>

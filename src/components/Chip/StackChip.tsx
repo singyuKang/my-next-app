@@ -1,36 +1,11 @@
 import { Tooltip } from '@nextui-org/react'
 import Image from 'next/image'
-import reactIcon from '@/assets/icon/react.svg'
-import reactNativeIcon from '@/assets/icon/reactnative.svg'
-import tsIcon from '@/assets/icon/typescript.svg'
-import jsIcon from '@/assets/icon/javascript.svg'
-import styledIcon from '@/assets/icon/styledcomponent.svg'
-import reactQueryIcon from '@/assets/icon/reactquery.svg'
-import reduxIcon from '@/assets/icon/redux.svg'
-import recoilIcon from '@/assets/icon/more.svg'
-import gitIcon from '@/assets/icon/github.svg'
-import tailwindIcon from '@/assets/icon/tailwind.svg'
-import axiosIcon from '@/assets/icon/axios.svg'
-import webpackIcon from '@/assets/icon/webpack.svg'
+import { stackIcons } from '@/utils/getsvgIcon'
 
 interface StackChipProp {
   title?: string
   stackList: string[]
   size?: number
-}
-const stackIcons: { [key: string]: string } = {
-  react: reactIcon,
-  reactnative: reactNativeIcon,
-  typescript: tsIcon,
-  javascript: jsIcon,
-  styledcomponent: styledIcon,
-  reactquery: reactQueryIcon,
-  redux: reduxIcon,
-  recoil: recoilIcon,
-  github: gitIcon,
-  tailwind: tailwindIcon,
-  axios: axiosIcon,
-  webpack: webpackIcon,
 }
 
 export const StackChip = ({ title, stackList, size = 20 }: StackChipProp) => {
