@@ -24,7 +24,7 @@ const IntroSection = () => {
 
   const photoBox = () => {
     return (
-      <div className="flex flex-col items-center justify-center flex-1 gap-4 min-w-[40rem]">
+      <div className="flex flex-col items-center justify-center flex-1 gap-4 min-w-[40rem] ">
         <Image
           className="rounded-full bg-[#d5d9db]"
           alt={''}
@@ -51,7 +51,7 @@ const IntroSection = () => {
 
   const stackBox = () => {
     return (
-      <div className="flex flex-1 max-h-[20rem] min-w-[21rem] mt-4 justify-center items-center">
+      <div className="flex flex-1 max-h-[20rem] min-w-[21rem] mt-4 justify-center items-center ">
         <div className="grid grid-cols-4 grid-rows-2 items-center justify-center gap-4">
           <WaveCard content="JavaScript" duration={4}>
             <Image
@@ -104,7 +104,7 @@ const IntroSection = () => {
 
   return (
     <div>
-      <div className="flex flex-wrap w-full min-h-[30rem] mt-2">
+      <div className="flex flex-wrap w-full min-h-[30rem] mt-2  max-w-[1200px] justify-center items-center mx-auto">
         {photoBox()}
         {stackBox()}
       </div>
