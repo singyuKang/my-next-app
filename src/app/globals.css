@@ -6,7 +6,7 @@
   html,
   body {
     min-height: 100%;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   svg {
@@ -34,7 +34,7 @@
 @media screen and (max-width: 768px) {
   html,
   body {
-    font-size: 14px;
+    font-size: 10px;
   }
   .download-btn-grow {
     flex-grow: 1;
