@@ -111,24 +111,24 @@ const IntroSection = () => {
       <CustomSection id="sample">
         <CustomSectionTitle
           title={'Intro'}
-          subTitle={'안녕하세요, 3년차 프론트엔드 개발자 강신규입니다.'}
+          subTitle={'안녕하세요, 프론트엔드 개발자 강신규입니다.'}
         />
         <div className="flex flex-col flex-wrap w-full justify-evenly">
           <div className="text-sm font-normal w-full flex flex-col gap-6">
             <Text variant="subtitle5">
-              저는 React, React-Native 를 사용해 3개의 웹/앱을 출시, 개발 및
-              유지보수하며 50만+ 다운로드를 달성한 경험이 있습니다.
+              React Native, React 를 사용해 4 개의 금융권 앱/웹을 출시, 개발 및
+              유지보수하며 50 만+ 다운로드를 달성한 경험이 있습니다.
             </Text>
             <Text variant="subtitle5">
-              7개월 동안 매주 5개의 알고리즘 문제를 풀어 골드2를 달성하였고,
-              블로그를 통해 최신 기술 트렌드를 학습하고 공부한 내용을 정리하고
-              있습니다.
+              반응형 웹 개발과 모바일 UI/UX 개발 경험을 바탕으로, 다양한
+              디바이스에서 일관된 사용자 경험을 제공하며, React Native WebView
+              기반의 웹-앱 메세지 통신과 React Native Bridge 를 활용한 iOS
+              네이티브 기능 연동 경험을 보유하고 있습니다.
             </Text>
-            {/* <Text variant="subtitle5">
-              디자이너, PM, 백엔드 개발자와의 협업 경험을 바탕으로 다양한 팀과
-              원활한 커뮤니케이션을 유지하며, 최적의 결과물을 도출하기 위해
-              노력합니다.
-            </Text> */}
+            <Text variant="subtitle5">
+              또한, 7 개월 동안 매주 5 개의 알고리즘 문제를 풀어 골드 2 를
+              달성하였으며, 블로그를 통해 학습내용을 정리하고 있습니다.
+            </Text>
           </div>
         </div>
       </CustomSection>

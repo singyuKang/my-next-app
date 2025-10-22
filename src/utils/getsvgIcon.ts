@@ -3,7 +3,8 @@ export const stackIcons: { [key: string]: string } = {
   reactnative: '/assets/icon/reactnative.svg',
   typescript: '/assets/icon/typescript.svg',
   javascript: '/assets/icon/javascript.svg',
-  styledcomponent: '/assets/icon/styledcomponent.svg',
+  styledcomponents: '/assets/icon/styledcomponents.svg',
+  storybook: '/assets/icon/storybook.svg',
   reactquery: '/assets/icon/reactquery.svg',
   redux: '/assets/icon/redux.svg',
   recoil: '/assets/icon/more.svg',
@@ -14,4 +15,5 @@ export const stackIcons: { [key: string]: string } = {
   swift: '/assets/icon/swift.svg',
   nextjs: '/assets/icon/next-js.svg',
   zeplin: '/assets/icon/zeplin.svg',
+  zustand: '/assets/icon/zustand.svg',
 }

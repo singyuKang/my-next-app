@@ -33,7 +33,7 @@ export const GlobalHeader = ({
     .trim()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const LinkList = [
-    'Experience',
+    // 'Experience',
     'Project',
     'Activity',
     'Blog',

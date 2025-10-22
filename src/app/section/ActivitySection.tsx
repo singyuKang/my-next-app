@@ -23,7 +23,7 @@ const ActivitySection = () => {
         </TableCell>
         <TableCell>
           <Text variant="body2" className="text-sm font-semibold">
-            · 7개월간 주 5문제씩 알고리즘 문제 해결, 팀원들과 토론을 통해 코드
+            · 주 5 문제씩 알고리즘 문제를 해결, 팀원들과 토론을 통해 코드 개선
             개선
           </Text>
           <Text variant="body2" className="text-sm font-semibold">
@@ -50,21 +50,30 @@ const ActivitySection = () => {
     return (
       <TableRow key={'woowacourse'}>
         <TableCell>
-          <Text variant="subtitle5">우아한테크코스 7기 웹 프리코스</Text>
+          <Text variant="subtitle5">항해 플러스 프론트엔드 5기</Text>
         </TableCell>
         <TableCell>
           <Text variant="body2" className="text-sm font-semibold">
-            · Javascript 프로그래밍 기술
+            · Vanilla JS 기반 SPA 를 직접 구현하며 라우터, 상태관리, DOM 조작 등
+            웹 핵심 원리 학습
           </Text>
           <Text variant="body2" className="text-sm font-semibold">
-            · Jest를 활용한 단위 테스트 경험
+            · Jest 기반 테스트 코드 작성
+          </Text>
+          <Text variant="body2" className="text-sm font-semibold">
+            · AWS CodePipeline + S3 + CloudFront 를 활용한 CI/CD 파이프라인 구축
+            및 배포 자동화 경험
+          </Text>
+          <Text variant="body2" className="text-sm font-semibold">
+            · React 의 useMemo, useCallback, React.memo 등을 활용한 불필요한
+            렌더링 방지 및 성능 최적화 경험
           </Text>
         </TableCell>
 
         <TableCell>
           <Link
             href={
-              'https://singyukang.tistory.com/category/%EC%9A%B0%EC%95%84%ED%95%9C%ED%85%8C%ED%81%AC%EC%BD%94%EC%8A%A4'
+              'https://singyukang.tistory.com/category/%ED%95%AD%ED%95%B4%20%ED%94%8C%EB%9F%AC%EC%8A%A4%20%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C%205%EA%B8%B0?page=1'
             }
             target="_blank"
           >
@@ -114,9 +123,9 @@ const ActivitySection = () => {
           ))}
         </TableHeader>
         <TableBody>
-          {FirstActivityView()}
           {SecondActivityView()}
-          {ThirdActivityView()}
+          {FirstActivityView()}
+          {/* {ThirdActivityView()} */}
         </TableBody>
       </Table>
     </CustomSection>
