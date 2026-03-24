@@ -23,6 +23,57 @@ type ProjectSectionVAProp = Record<string, unknown>
 const ProjectSectionView = ({}: ProjectSectionVAProp) => {
   const tableHeader = ['프로젝트', '소개 / 사용기술', '상세정보']
 
+  const StellaProjectView = () => {
+    return (
+      <TableRow key={'stellaBranch'}>
+        <TableCell>
+          <Text variant="subtitle5">
+            동양저축은행 스텔라 브랜치 태블릿 앱
+          </Text>
+        </TableCell>
+        <TableCell>
+          <Text variant="body2" className="text-sm font-semibold">
+            React 19 + TypeScript 기반 저축은행 태블릿 앱 개발
+          </Text>
+          <StackChip
+            stackList={[
+              'React',
+              'Typescript',
+              'Vite',
+              'Zustand',
+              'ReactQuery',
+              'Tailwind',
+              'Shadcn',
+              'Storybook',
+              'Playwright',
+            ]}
+          />
+        </TableCell>
+
+        <TableCell>
+          <ExtraInfoDialog
+            dialogTitle={
+              '동양저축은행 스텔라 브랜치 태블릿 앱 - 2025.11 ~ 2026.03(5개월)'
+            }
+          >
+            <Titleli
+              title={'주요 업무'}
+              list={[
+                'Claude Code + Playwright MCP 연동으로 AI 기반 테스트 자동화 파이프라인 구축',
+                'Planner → Generator → Healer: 계획 수립, 코드 생성, 실패 테스트 자동 수정',
+                'Playwright 기반 420개+ E2E 테스트 케이스, 10단계 대출신청 등 11개 핵심 플로우 검증',
+                'MSW 기반 API Mocking으로 네트워크 독립적인 테스트 환경 구축',
+                'Mermaid 다이어그램으로 13개 페이지의 플로우 구조 및 API 호출 시퀀스 문서화',
+                'Storybook + MSW 연동으로 11개 플로우의 API 상태별(성공/에러/지연) 시각적 테스트 환경 구축',
+                'shadcn/ui 패턴 기반 Button, Dialog, Drawer 등 40개+ 공통 컴포넌트 개발',
+              ]}
+            />
+          </ExtraInfoDialog>
+        </TableCell>
+      </TableRow>
+    )
+  }
+
   const FirstProjectView = () => {
     return (
       <TableRow key={'savingsBankLoan'}>
@@ -205,6 +256,7 @@ const ProjectSectionView = ({}: ProjectSectionVAProp) => {
           ))}
         </TableHeader>
         <TableBody>
+          {StellaProjectView()}
           {FirstProjectView()}
           {SecondProjectView()}
           {ThirdProjectView()}

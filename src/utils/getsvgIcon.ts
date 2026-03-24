@@ -16,4 +16,7 @@ export const stackIcons: { [key: string]: string } = {
   nextjs: '/assets/icon/next-js.svg',
   zeplin: '/assets/icon/zeplin.svg',
   zustand: '/assets/icon/zustand.svg',
+  shadcn: '/assets/icon/shadcn.svg',
+  vite: '/assets/icon/vite.svg',
+  playwright: '/assets/icon/playwright.svg',
 }

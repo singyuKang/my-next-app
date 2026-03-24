@@ -116,7 +116,7 @@ const IntroSection = () => {
         <div className="flex flex-col flex-wrap w-full justify-evenly">
           <div className="text-sm font-normal w-full flex flex-col gap-6">
             <Text variant="subtitle5">
-              React Native, React 를 사용해 4 개의 금융권 앱/웹을 출시, 개발 및
+              React Native, React 를 사용해 5 개의 금융권 앱/웹을 출시, 개발 및
               유지보수하며 50 만+ 다운로드를 달성한 경험이 있습니다.
             </Text>
             <Text variant="subtitle5">
